@@ -1,0 +1,20 @@
+#!/bin/bash
+
+# Softer colors from Catppuccin Mocha
+artist_color="#7f849c"   
+title_color="#7f849c"   
+reset="%{F-}"
+
+status=$(playerctl --player=spotify status 2>/dev/null)
+
+if [ "$status" = "Playing" ]; then
+    artist=$(playerctl --player=spotify metadata artist)
+    title=$(playerctl --player=spotify metadata title)
+    echo "%{F$artist_color}$artist$reset - %{F$title_color}$title$reset"
+elif [ "$status" = "Paused" ]; then
+    artist=$(playerctl --player=spotify metadata artist)
+    title=$(playerctl --player=spotify metadata title)
+    echo "%{F#7f849c}Paused: %{F$artist_color}$artist$reset - %{F$title_color}$title$reset"
+else
+    echo ""
+fi

@@ -1,0 +1,18 @@
+# ~/.config/i3/scripts/powermenu.sh
+#!/bin/bash
+
+shutdown=' Shutdown'
+reboot=' Reboot'
+lock=' Lock'
+suspend=' Suspend'
+logout=' Logout' 
+shutdown=' Shutdown'
+
+chosen=$(echo -e "$suspend\n$logout\n$reboot\n$shutdown" | rofi -dmenu -theme ~/.config/rofi/config.rasi -i -p "")
+
+case "$chosen" in
+    "$suspend") systemctl suspend  ;;
+    "$logout")  i3-msg exit ;;
+    "$reboot") reboot ;;
+    "$shutdown") poweroff ;;
+esac
