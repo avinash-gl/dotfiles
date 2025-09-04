@@ -1,12 +1,5 @@
 # ~/.zshrc
 
-# Aliases
-alias ll='ls -lah'
-alias gs='git status'
-alias pss='sudo pacman -Ss'
-alias yss='yay -Ss'
-alias ps='sudo pacman -S'
-alias ys='yay -S' 
 
 # History
 HISTFILE=~/.zsh_history
@@ -36,7 +29,7 @@ wal-tile() {
     feh --bg-tile "$(< "${HOME}/.cache/wal/wal")"
 }
 
-
+source ~/.zsh/aliases
 source ~/.zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 source ~/.zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 export PATH="$HOME/scripts:$PATH"

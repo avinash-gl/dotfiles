@@ -1,0 +1,23 @@
+# Aliases
+
+alias cl='clear'
+
+# Packages
+alias pacup='sudo pacman -Syu'            # Full system update
+alias pacin='sudo pacman -S'              # Install package
+alias pacre='sudo pacman -Rns'            # Remove package + deps
+alias pacse='pacman -Ss'                  # Search package in repos
+alias paclo='pacman -Qdtq'                # List orphaned packages
+alias paccf='pacman -Qm'                  # List AUR packages (foreign)
+
+
+# --- AUR Helper (yay) ---
+alias yayup='yay -Syu'                    # Update all (repos + AUR)
+alias yayin='yay -S'                       # Install from AUR
+alias yayse='yay -Ss'                      # Search AUR
+alias yayre='yay -Rns'                     # Remove package via yay
+
+# --- File & Directory Shortcuts ---
+alias ..='cd ..'
+alias ...='cd ../..'
+alias ....='cd ../../..'
