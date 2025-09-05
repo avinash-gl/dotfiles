@@ -206,6 +206,9 @@ exec_always xrandr --output eDP-1 --mode 1920x1080
 # File Manager
 bindsym $mod+e exec nautilus
 
+bindsym $mod+n exec kitty -e nmtui
+
+
 # Lockscreen
 bindsym $mod+shift+x exec betterlockscreen -l blur
 
