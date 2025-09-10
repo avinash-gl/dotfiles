@@ -1,6 +1,5 @@
 # ~/.zshrc
 
-
 # History
 HISTFILE=~/.zsh_history
 HISTSIZE=10000
@@ -18,10 +17,7 @@ eval "$(starship init zsh)"
 # Fastfetch on startup
 fastfetch
 
-# Spicetify
-export PATH=$PATH:/home/avi/.spicetify
-
-
+# Pywal
 (cat ~/.cache/wal/sequences &)
 
 wal-tile() {
@@ -29,10 +25,12 @@ wal-tile() {
     feh --bg-tile "$(< "${HOME}/.cache/wal/wal")"
 }
 
+export PATH="$HOME/.local/bin:$PATH"
+
+# External Links
 source ~/.zsh/aliases
 source ~/.zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 source ~/.zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-export PATH="$HOME/scripts:$PATH"
-export PATH="$HOME/.config/i3/scripts:$PATH"
-export PATH="$HOME/.local/bin:$PATH"
+
+
 
