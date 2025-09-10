@@ -30,7 +30,7 @@ for_window [class="code-oss"] border pixel 3
 bindsym $mod+Return exec kitty
 
 # browser
-bindsym $mod+b exec zen-browser
+bindsym $mod+b exec brave
 
 # File Manager
 bindsym $mod+e exec nautilus
@@ -66,6 +66,9 @@ exec_always --no-startup-id autotiling
 
 # autostart kitty
 exec --no-startup-id i3-msg 'workspace 1; exec kitty'
+
+# Dunst
+exec --no-startup-id dunst
 
 # Wallpaper
 # exec_always --no-startup-id feh --bg-fill ~/Downloads/blue-sky.png
@@ -212,14 +215,14 @@ bindsym $mod+Shift+0 move container to workspace number $ws10
 
 
 # color scheme
-# set_from_resource $fg i3wm.color7 #f0f0f0
-# set_from_resource $bg i3wm.color2 #f0f0f0
+set_from_resource $fg i3wm.color7 #f0f0f0
+set_from_resource $bg i3wm.color2 #f0f0f0
 
 # class                 border  backgr. text indicator child_border
-# client.focused          $bg     $bg     $fg  $bg       $bg
-# client.focused_inactive $bg     $bg     $fg  $bg       $bg
-# client.unfocused        $bg     $bg     $fg  $bg       $bg
-# client.urgent           $bg     $bg     $fg  $bg       $bg
-# client.placeholder      $bg     $bg     $fg  $bg       $bg
+client.focused          $bg     $bg     $fg  $bg       $bg
+client.focused_inactive $bg     $bg     $fg  $bg       $bg
+client.unfocused        $bg     $bg     $fg  $bg       $bg
+client.urgent           $bg     $bg     $fg  $bg       $bg
+client.placeholder      $bg     $bg     $fg  $bg       $bg
 
-# client.background       $bg
+client.background       $bg
