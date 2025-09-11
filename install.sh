@@ -16,7 +16,7 @@ echo "[*] System updated and essential packages installed successfully..."
 echo "[*] INSTALLING YAY PACKAGE MANAGER..."
 sudo pacman -S --needed git base-devel
 git clone https://aur.archlinux.org/yay.git
-cd yay
+cd ~/yay
 makepkg -si
 yay -Syu
 echo "[*] INSTALLED YAY PACKAGE MANAGER..."
@@ -69,6 +69,14 @@ echo "[*] PICOM SETUP COMPLETE..."
 echo "[*] SETTING UP WALLPAPERS"
 stow wallpapers
 echo "[*] WALLPAPERS SETUP COMPLETE..."
+
+echo "[*] SETTING UP FASTFETCH"
+stow fastfetch
+echo "[*] FASTFETCH SETUP COMPLETE..."
+
+
+
+
 
 
 
