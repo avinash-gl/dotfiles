@@ -5,7 +5,7 @@ THEME_FILE="$HOME/.config/rofi/theme.rasi"
 
 # Generate list with image previews
 wallpaper=$(find -L "$WALL_DIR" -maxdepth 1 -type f \( -iname "*.jpg" -o -iname "*.png" -o -iname "*.jpeg" \) \
-    -printf "%f\n" | sort | while read -r wp; do
+    -printf "%f\n" | shuf | while read -r wp; do
         printf "%s\0icon\x1f%s/%s\n" "$wp" "$WALL_DIR" "$wp"
     done | rofi -dmenu \
         -p "" \
