@@ -15,6 +15,7 @@ echo "[*] System updated and essential packages installed successfully..."
 
 echo "[*] INSTALLING YAY PACKAGE MANAGER..."
 sudo pacman -S --needed git base-devel
+cd ~
 git clone https://aur.archlinux.org/yay.git
 cd ~/yay
 makepkg -si
