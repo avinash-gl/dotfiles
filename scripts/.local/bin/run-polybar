@@ -7,4 +7,28 @@ polybar-msg cmd quit
 
 polybar 
 
-echo "Bars launched..."
+
+
+# UNCOMMENT IF USING FLOATING ISLAND POLYBAR AND ADD 
+# gaps top 55 IN I3 GAPS
+
+#!/bin/bash
+
+# Define your bar names
+#BARS=("left" "music" "center" "right")
+
+# Kill running instances of these bars
+#for bar in "${BARS[@]}"; do
+#    if pgrep -x polybar >/dev/null; then
+#        pkill -f "polybar -r $bar"
+#    fi
+#done
+
+# Give Polybar a moment to shut down
+#sleep 0.5
+
+# Restart each bar
+#for bar in "${BARS[@]}"; do
+#    echo "Starting polybar -r $bar..."
+#    polybar -r "$bar" &
+#done

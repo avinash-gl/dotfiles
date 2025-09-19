@@ -1,20 +1,12 @@
 * {{
 
-    
-    active-background: {color2}; 
+    active-background: {color6}; 
     alt-background: {color1}; 
     active-foreground: {color0}; 
     normal-background: @background;
     normal-foreground: @foreground;
     urgent-background: {color1};
     urgent-foreground: @foreground;
-
-    alternate-active-background: @background;
-    alternate-active-foreground: @foreground;
-    alternate-normal-background: @background;
-    alternate-normal-foreground: @foreground;
-    alternate-urgent-background: @background;
-    alternate-urgent-foreground: @foreground;
 
     selected-active-background: {color1};
     selected-active-foreground: @foreground;

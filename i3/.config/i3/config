@@ -19,7 +19,9 @@ floating_modifier $mod
 
 # Set window border style
 new_window pixel 3
-for_window [class="code-oss"] border pixel 3
+for_window [class="VSCodium"] border pixel 3
+for_window [floating] border pixel 3
+
 
 
 #################################
@@ -33,13 +35,16 @@ bindsym $mod+Return exec kitty
 bindsym $mod+b exec brave
 
 # File Manager
-bindsym $mod+e exec nautilus
+bindsym $mod+e exec nemo
+
+# VS Code
+bindsym $mod+c exec vscodium
 
 # Terminal Network Manager
 bindsym $mod+n exec kitty -e nmtui
 
 # start rofi (program launcher)
-bindsym $mod+a exec --no-startup-id rofi -show drun
+bindsym $mod+a exec --no-startup-id rofi -show drun -theme ~/.config/rofi/theme.rasi
 
 # power button rofi power menu
 bindsym  XF86PowerOff exec --no-startup-id $HOME/.local/bin/rofi-power-menu

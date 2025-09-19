@@ -1,12 +1,25 @@
 @import "~/.cache/wal/rofi-colors.rasi"
 
+configuration{
+    modi: "drun";
+    icon-theme: "Papirus-Dark";
+    font: "Jet Brains Mono Nerd Font 16";
+    show-icons: true;
+    terminal: "kitty";
+    drun-display-format: "{icon} {name}";
+    location: 0;
+    display-drun: "";
+    disable-history: false;
+    hide-scrollbar: false;
+    sidebar-mode: false;
+}
 
 window {
     border-color: @active-background;
     border-radius: 0;
     border: 3px solid;
     transparency: "real";
-    width: 600px;
+    width: 500px;
 }
 
 mainbox {
@@ -15,19 +28,22 @@ mainbox {
 
 inputbar {
     border-color: @active-background;
-    border: 0 0 3px 0 solid;
+    margin: 5px;
+    border: 0px solid;
     children: [prompt,entry];
     text-color: @normal-foreground;
     border-radius: 0px;
+    background-color: @alt-background;
 }
 
 prompt {
     padding: 3px;
     text-color: @normal-foreground;
-    border-radius: 12px;
+    border-radius: 0px;
   	margin: 0px 5px 0px 0px;
   	horizontal-align: 0.5;
   	vertical-align: 0.5;
+     background-color: @alt-background;
 }
 
 textbox-prompt-colon {
@@ -36,30 +52,32 @@ textbox-prompt-colon {
 }
 
 entry {
-    placeholder: "search";
-    padding: 6px;
-    text-color: @foreground;
+    placeholder: " Search";
+    padding: 7px;
+     background-color: @alt-background;
+    text-color: @background;
     vertical-align: 0.5;
 }
 
 listview {
     padding: 15px 0px 0px 0px;
     columns: 1;
-    lines: 4;
+    lines: 5;
      background-color: transparent;
 }
 
 element {
     
-    border-radius: 12px;
-    margin: 5px ;
-    padding:5px;
+    border-radius: 0px;
+    margin: 2px ;
+    padding: 2px;
    background-color: transparent;
 }
 
 element-text {
+    
 	vertical-align: 0.5;
-    text-color: @foreground;
+    text-color: @active-background;
     background-color: transparent;
 }
 
@@ -70,10 +88,23 @@ element-icon {
 }
 
 element selected.normal {
-    border-radius: 10;
+
+    border-radius: 0;
     border-color: @active-background;
-    border: 3px 0 3px 0 solid;
-    text-color: @selected-active-foreground;
+    border: 3px solid;
+    text-color: #2432ff23;
+    background-color: @alt-background;
+}
+
+element-text selected.normal {
+	vertical-align: 0.5;
+    text-color:     @background;
+    background-color: transparent;
+}
+
+element selected.active {
+    background-color:            @active-background;
+    text-color:                  #2432ff23;
 }
 
 mode-switcher {
@@ -83,6 +114,7 @@ mode-switcher {
 button {
     enabled: false;
 }
+
 
 message {
     background-color: @active-background;
