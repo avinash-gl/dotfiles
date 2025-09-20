@@ -1,14 +1,13 @@
 # ~/.config/i3/scripts/powermenu.sh
 #!/bin/bash
 
-shutdown=' Shutdown'
-reboot=' Reboot'
-lock=' Lock'
-suspend=' Suspend'
-logout=' Logout' 
-shutdown=' Shutdown'
+shutdown=' 󰐥 '
+reboot='  '
+lock='  '
+suspend='  '
+logout=' 󰍃 '
 
-chosen=$(echo -e "$suspend\n$logout\n$reboot\n$shutdown" | rofi -dmenu -theme ~/.config/rofi/config.rasi -i -p "")
+chosen=$(echo -e "$suspend\n$logout\n$reboot\n$shutdown" | rofi -dmenu -theme ~/.config/rofi/themes/powermenu_v.rasi )
 
 case "$chosen" in
     "$suspend") systemctl suspend  ;;

@@ -1,0 +1,103 @@
+@import "~/.cache/wal/rofi-colors.rasi"
+
+
+* {
+    border-radius:       8px;
+    padding:             5px;
+    margin:              5px;
+    font:                "Jet Brains Mono Nerd Font Bold 12";
+}
+
+window {
+   
+    background-color: @background;
+    border-color: @border;
+    border: 3px solid;
+    transparency: "real";
+    width:70%;
+    height: 50%;
+    
+}
+
+mainbox {
+    background-color: @background;
+    padding: 20px;
+}
+
+inputbar {
+    border: 1px solid;
+    background-color: transparent;
+    border-color: @border;
+    padding: 2px 2px;
+    margin: 2px;
+    text-color: @background;
+    children: [ prompt, textbox-prompt-colon, entry ];
+}
+
+prompt {
+    enabled: false;
+}
+
+
+textbox-prompt-colon {
+    enabled: false;
+}
+
+entry {
+    placeholder: "Search wallpapers...";
+    placeholder-color: @active-background;
+    background-color: transparent;
+    text-color: @active-background;
+    font: "JetBrainsMono Nerd Font Italic 12";
+}
+
+
+listview {
+    lines: 1;
+    columns: 3;
+    spacing: 1em;
+    fixed-columns: true;
+    background-color: transparent;
+    spacing: 5px;
+    scrollbar: false;
+    scrollbar-width: 2px;
+}
+
+element {
+    width: 285px;
+    orientation: vertical; 
+    background-color: transparent;
+    text-color: @active-background;
+}
+
+element-text {
+    border-color: @border;
+    border: 2px solid;
+    padding: 5px;
+    background-color: transparent;
+    text-color: @active-background;
+    horizontal-align: 0.5;
+    vertical-align: 0.5;
+}
+
+element-icon {
+    border-color: @border;
+    border: 2px solid;
+    horizontal-align: 0.5;
+    vertical-align: 0.5;
+    size: 14em;
+    padding: 0px;
+    background-color: transparent;
+    text-color: inherit;
+}
+
+element selected {
+    background-color: transparent;
+    border-color: @border;
+    border: 2px solid;
+    text-color: @active-foreground;
+}
+
+textbox {
+    text-color: @active-background;
+}

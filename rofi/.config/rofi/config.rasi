@@ -1,16 +1,14 @@
 
 configuration{
-    modi: "drun";
+    modi: ["drun", "window", "run"];
     icon-theme: "Papirus-Dark";
-    font: "Jet Brains Mono Nerd Font 16";
     show-icons: true;
     terminal: "kitty";
     drun-display-format: "{icon} {name}";
-    location: 0;
     display-drun: "";
+    display-run: "";
+    display-window: "";
     disable-history: false;
-    hide-scrollbar: false;
     sidebar-mode: false;
 }
 
-@theme "theme.rasi"

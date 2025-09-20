@@ -2,10 +2,10 @@
 
 # Terminate already running bar instances
 # If all your bars have ipc enabled, you can use 
-polybar-msg cmd quit
+ polybar-msg cmd quit
 # Otherwise you can use the nuclear option:
 
-polybar 
+ polybar 
 
 
 
@@ -15,20 +15,20 @@ polybar
 #!/bin/bash
 
 # Define your bar names
-#BARS=("left" "music" "center" "right")
+BARS=("left" "music" "center" "right")
 
 # Kill running instances of these bars
-#for bar in "${BARS[@]}"; do
-#    if pgrep -x polybar >/dev/null; then
-#        pkill -f "polybar -r $bar"
-#    fi
-#done
+for bar in "${BARS[@]}"; do
+    if pgrep -x polybar >/dev/null; then
+       pkill -f "polybar -r $bar"
+    fi
+done
 
 # Give Polybar a moment to shut down
-#sleep 0.5
+sleep 0.5
 
 # Restart each bar
-#for bar in "${BARS[@]}"; do
-#    echo "Starting polybar -r $bar..."
-#    polybar -r "$bar" &
-#done
+for bar in "${BARS[@]}"; do
+    echo "Starting polybar -r $bar..."
+    polybar -r "$bar" &
+done

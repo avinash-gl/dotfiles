@@ -2,22 +2,17 @@
 
     active-background: {color6}; 
     alt-background: {color1}; 
+    selected-active: {color15};
     active-foreground: {color0}; 
-    normal-background: @background;
+    normal-background: {color8};
     normal-foreground: @foreground;
     urgent-background: {color1};
     urgent-foreground: @foreground;
 
-    selected-active-background: {color1};
-    selected-active-foreground: @foreground;
-    selected-normal-background: {color2};
-    selected-normal-foreground: @foreground;
-    selected-urgent-background: {color3};
-    selected-urgent-foreground: @foreground;
 
     background-color: @background;
     background: {background};
     foreground: {foreground};
-    border-color: @background;
+    border: {color6};
 
 }}

@@ -44,7 +44,7 @@ bindsym $mod+c exec vscodium
 bindsym $mod+n exec kitty -e nmtui
 
 # start rofi (program launcher)
-bindsym $mod+a exec --no-startup-id rofi -show drun -theme ~/.config/rofi/theme.rasi
+bindsym $mod+a exec --no-startup-id rofi -show drun -theme "$HOME/.config/rofi/themes/launcher.rasi"
 
 # power button rofi power menu
 bindsym  XF86PowerOff exec --no-startup-id $HOME/.local/bin/rofi-power-menu
@@ -119,12 +119,12 @@ bindsym $mod+f fullscreen toggle
 # change container layout (stacked, tabbed, toggle split)
 bindsym $mod+s layout stacking
 bindsym $mod+w layout tabbed
-# bindsym $mod+e layout toggle split
+bindsym $mod+t layout toggle split
 
 # toggle tiling / floating
 bindsym $mod+Shift+space floating toggle
 
-# change focus between tiling / floating windows
+# change focus between tiling / floating windows-
 # bindsym $mod+space focus mode_toggle
 
 # focus the parent container
@@ -151,7 +151,7 @@ bindsym XF86MonBrightnessDown exec --no-startup-id brightnessctl set 5%-
 # default gaps
 gaps inner 15
 gaps outer 3
-
+gaps top 55
 
 # resize window (you can also use the mouse for that)
 mode "resize" {

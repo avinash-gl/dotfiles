@@ -1,0 +1,73 @@
+@import "~/.cache/wal/rofi-colors.rasi"
+
+configuration{
+
+    show-icons: false;
+}
+
+* {
+    
+    border-radius:       8px;
+    padding:             0px;
+    margin:              0px;
+}
+
+
+window {
+   location:   west;
+    anchor:   west;
+    x-offset:   20px;
+    font: "JetBrains Mono Nerd Font 18";
+    fullscreen: false;
+    width: 100px;
+    height: 370px;
+    enabled: true;
+    border: 2px solid;
+    border-color: @active-background;
+    background-color: @background;
+}
+
+
+mainbox {
+    background-color: @background;
+    children: [ "listview" ];
+}
+
+
+listview {
+    lines: 4;
+    columns: 1;
+    spacing: 20px;
+    margin: 5px;
+    layout: vertical;
+    background-color: transparent;
+    scrollbar: false;
+}
+
+element {
+    margin: 9px 0px 1px 0px;
+    padding: 1px 4px 0px 0px;
+    border: 0px solid;
+    border-radius: 0px;
+    background-color: transparent;
+    text-color: @text;
+    cursor: pointer;
+    vertical-align: 0.5;
+    horizontal-align: 0.5;
+}
+
+
+
+element-text {
+    text-color: @alt-background;
+    background-color: transparent;
+    cursor: inherit;
+    font: "JetBrains Mono Nerd Font 33";
+}
+
+
+
+element-text selected{
+    text-color: @selected-active;
+}
+

@@ -14,5 +14,11 @@ elif [ "$status" = "Paused" ]; then
     title=$(playerctl --player=spotify metadata title)
     echo "Paused: $artist$reset - $title$reset"
 else
-    echo ""
+
+echo -e " No music playing currently "
+
 fi
+
+
+
+
