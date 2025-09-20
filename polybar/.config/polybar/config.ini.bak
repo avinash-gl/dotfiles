@@ -58,7 +58,7 @@ font-1 = "Font Awesome 5 Free:style=Solid:pixelsize=12;1"
 font-2 = "JetBrainsMono Nerd Font:style=Regular:pixelsize=14;5"
 
 
-modules-left =  lb powermenu rb lb xworkspaces rb lb spotify rb
+modules-left =  lb powermenu rb lb xworkspaces rb lb cava rb lb spotify rb
 modules-center = lb xwindow rb 
 modules-right =  lb memory sep cpu sep pulseaudio sep wireless-network sep date sep battery rb 
 
@@ -98,6 +98,14 @@ label-empty = %name%
 label-empty-foreground = ${colors.disabled}
 label-empty-padding = 1
 
+[module/cava]
+type = custom/script
+tail = true
+exec = $HOME/.local/bin/cava.sh
+format = <label>
+format-foreground = ${colors.primary}
+format-font = 5
+label = %output%
 
 # Spotify 
 [module/spotify]
