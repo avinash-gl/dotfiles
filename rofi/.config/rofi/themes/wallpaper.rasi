@@ -57,6 +57,8 @@ listview {
     columns: 3;
     spacing: 1em;
     fixed-columns: true;
+    fixed-height: true;
+    fixed-width: true;
     background-color: transparent;
     spacing: 5px;
     scrollbar: false;
@@ -65,7 +67,11 @@ listview {
 
 element {
     width: 285px;
+    height: 200px;
     orientation: vertical; 
+    fixed-columns: true;
+    fixed-height: true;
+    fixed-width: true;
     background-color: transparent;
     text-color: @active-background;
 }
@@ -85,10 +91,12 @@ element-icon {
     border: 2px solid;
     horizontal-align: 0.5;
     vertical-align: 0.5;
-    size: 14em;
+    size: 305px;
     padding: 0px;
     background-color: transparent;
     text-color: inherit;
+    max-width: 100%;  /* Limit the width */
+    max-height: 100%;
 }
 
 element selected {

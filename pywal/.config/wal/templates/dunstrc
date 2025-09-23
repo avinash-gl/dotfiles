@@ -1,0 +1,37 @@
+
+[global]
+    monitor = 0
+    follow = keyboard
+    width = (30, 300)
+    height = (30, 500)
+    offset = (25, 60)
+    origin = top-right
+    notification_limit = 5
+    icon_corner_radius = 0
+    padding = 8
+    horizontal_padding = 8
+    gap_size = 3
+    transparency = 35
+    frame_width = 3
+    frame_color = "{color6}"
+    font = Jet Brains Mono Nerd Font 11
+    corner_radius = 0
+    min_icon_size = 60
+    max_icon_size = 60
+    format = "<b>%s</b>\n%b"
+
+[urgency_low]
+    foreground = "{color7}"
+    background = "{color0}"
+    timeout = 3
+
+[urgency_normal]
+    foreground = "{color7}"
+    background = "{color0}"
+    timeout = 5
+
+[urgency_critical]
+    background = "{color13}"
+    foreground = "{color7}"
+    frame_color = "{color0}"
+    timeout = 15

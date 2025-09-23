@@ -103,3 +103,7 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 source ~/.zsh/aliases
+export PATH=$PATH:/home/avi/.spicetify
+
+ (cat ~/.cache/wal/sequences &)
+    source ~/.cache/wal/colors-tty.sh

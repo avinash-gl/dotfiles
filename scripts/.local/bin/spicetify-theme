@@ -1,0 +1,40 @@
+#!/bin/bash
+
+colors=$(jq -r '.colors' < ~/.cache/wal/colors.json)
+
+cat > ~/.config/spicetify/Themes/text/color.ini <<EOF
+[Pywal]
+accent             = $(jq -r '.color5' <<< "$colors" | sed 's/#//')
+accent-active      = $(jq -r '.color6' <<< "$colors" | sed 's/#//')
+accent-inactive    = $(jq -r '.color4' <<< "$colors" | sed 's/#//')
+text               = $(jq -r '.color6' <<< "$colors" | sed 's/#//')
+subtext            = $(jq -r '.color3' <<< "$colors" | sed 's/#//')
+main               = $(jq -r '.color0' <<< "$colors" | sed 's/#//')
+main-elevated      = $(jq -r '.color8' <<< "$colors" | sed 's/#//')
+highlight          = $(jq -r '.color2' <<< "$colors" | sed 's/#//')
+sidebar            = $(jq -r '.color0' <<< "$colors" | sed 's/#//')
+player             = $(jq -r '.color1' <<< "$colors" | sed 's/#//')
+card               = $(jq -r '.color3' <<< "$colors" | sed 's/#//')
+selected-row       = $(jq -r '.color4' <<< "$colors" | sed 's/#//')
+button             = $(jq -r '.color5' <<< "$colors" | sed 's/#//')
+button-active      = $(jq -r '.color4' <<< "$colors" | sed 's/#//')
+notification       = $(jq -r '.color0' <<< "$colors" | sed 's/#//')
+notification-error = $(jq -r '.color1' <<< "$colors" | sed 's/#//')
+equalizer          = $(jq -r '.color2' <<< "$colors" | sed 's/#//')
+misc               = $(jq -r '.color3' <<< "$colors" | sed 's/#//')
+banner             = $(jq -r '.color4' <<< "$colors" | sed 's/#//')
+header             = $(jq -r '.color4' <<< "$colors" | sed 's/#//')
+border-active      = $(jq -r '.color6' <<< "$colors" | sed 's/#//') 
+border-inactive    = $(jq -r '.color2' <<< "$colors" | sed 's/#//') 
+EOF
+
+
+spicetify apply --no-restart
+
+
+
+
+
+
+
+

@@ -15,7 +15,7 @@ elif [ "$status" = "Paused" ]; then
     echo "Paused: $artist$reset - $title$reset"
 else
 
-echo -e " No music playing currently "
+echo -e " No music playing "
 
 fi
 
