@@ -14,8 +14,8 @@ window {
     border-color: @border;
     border: 3px solid;
     transparency: "real";
-    width:70%;
-    height: 50%;
+    width: 1200px;
+    height: 600px;
     
 }
 
